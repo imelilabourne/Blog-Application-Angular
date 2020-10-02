@@ -1,0 +1,23 @@
+img{
+    max-width: 200px;
+}
+
+.bg{
+    margin: 50px 0;
+    background-color: rgb(215, 234, 235);
+    padding: 20px;
+}
+
+.status{
+    margin: auto;
+    width: 80%;
+}
+
+
+.bottom > h3{
+    margin-left: 90px;
+}
+
+.sucess{
+    text-decoration: line-through;
+}

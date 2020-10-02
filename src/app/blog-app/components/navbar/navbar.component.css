@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&family=Rochester&display=swap');
+
+nav, a{  
+    color: white;
+}
+
+nav{
+    display: flex;
+    background-color:#001935;
+    height: 50px;
+    line-height: 50px;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.links > a{
+    margin: 0 20px;
+}
+
+.logo{
+    margin: 0 20px;
+    font-family: 'Rochester', cursive;
+    font-size: 30px;
+}
+
+.logout{
+    position: absolute;
+    right: 20px;
+}
+
+a > i{
+    font-size: 25px;
+    line-height: 50px;
+}

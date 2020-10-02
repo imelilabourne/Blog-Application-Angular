@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&display=swap');
+.login{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    font-family: 'Noto Sans JP', sans-serif;  
+    align-items: center;
+    height: 90vh;
+}
+
+
+input{
+    margin-top: 10px;
+    border: none;
+    border-radius: 0px;
+}
+
+.input-left{
+    margin-top: 10px;
+    width: 40px;
+    height: inherit;
+    background-color: rgb(214, 214, 214);
+    color: rgb(82, 82, 79);
+}
+
+.input-left > i{
+    
+    font-size: 20px;
+    line-height: 35px;
+}
+
+.input{
+    display: flex;
+}
+
+img{
+    max-width: 60px;
+}
+
+.logo{
+    box-shadow: rgb(88, 88, 85) 0px 5px;
+    padding: 30px;
+    text-align: center;
+    min-height: 380px;
+    margin: 0 20px;
+    background-color: rgba(240, 240, 240, 0.562);
+}
+
+button{
+    height: 35px;
+    background-color: rgb(27, 163, 134);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+}
+
+button:hover{
+    background-color: rgb(32, 122, 134);
+    color: blanchedalmond;
+    border: none;
+}
+
+button > a{
+    color: white;
+    text-decoration: none;
+} 
+
+.signup{
+    margin-top: 30px;
+}
+
+small{
+    color: red;
+}
+

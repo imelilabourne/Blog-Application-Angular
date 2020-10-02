@@ -1,0 +1,150 @@
+img{
+    max-width: 250px;
+}
+
+.post{
+    border: 1px black;
+}
+
+button{
+    margin-left: 6px;
+}
+
+.title{
+    /* text-align: center; */
+    padding-left: 20px;
+    border: 2px black;
+    line-height: 50px;
+    font-size: 20px;
+    background-color: rgb(26, 53, 85);
+    color: white;
+    margin: 0 10px;
+    width: 100%;
+}
+
+.content{
+    height: 10em;
+}
+
+.container{
+    width: 60%;
+    min-width: 500px;
+}
+
+
+.row{
+    padding: 0 !important;
+    margin: 0;
+}
+
+
+.openDraft{
+    display: block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    color: white;
+    position: absolute;
+    left: 220px;
+    top: 8px;
+    background-color: #001935;
+}
+
+.openDraft .card{
+    visibility: hidden;
+}
+
+.openDraft:hover .card{
+    visibility: visible;
+}
+
+.openDraft:hover .fa{
+    visibility: hidden;
+}
+
+
+
+.openDraft:hover{
+    width: 70%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(139, 139, 128, 0.836);
+}
+
+
+div > i {
+    font-size: 25px;
+}
+
+.draft-container{
+    background-color: rgb(253, 253, 253);
+    margin: 20px;
+    border-radius: 5px;
+}
+
+.draft-content{
+    margin: 20px;
+    color: teal;
+}
+
+.panel .panel-body{
+    display: none;
+}
+
+.panel:hover .panel-body{
+    display: block;
+}
+
+.posts > div{
+   margin: 20px;
+   padding: 10px;
+   border: solid 1px rgb(197, 193, 193);
+   
+}
+
+.date{
+    float: right;
+    margin-right: 20px; 
+    color: gray;
+}
+
+i {
+    color: white;
+}
+
+.editInput{
+    background-color: rgb(26, 53, 85);
+    width: inherit;
+}
+
+/* .image-wrapper{
+    width: 200px;
+    height: 100px;
+    border: 1px solid;
+}
+
+.image-wrapper > img{
+    width: 100%;
+} */
+
+.blog-post-inner{
+    display: flex;
+}
+
+.blog-post-inner > .image-wrapper > img{
+    transition: transform .5s;
+    
+}
+
+.image-wrapper{
+    display: grid;
+    align-self: center;
+}
+
+.blog-post-inner > .image-wrapper > img:hover{
+    transform: scale(1.2);
+}
+
+.span{
+    margin: 0 20px;
+}

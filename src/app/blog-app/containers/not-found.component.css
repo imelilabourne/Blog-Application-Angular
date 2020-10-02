@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Secular+One&display=swap');
+.container > *{
+    text-align: center;
+}
+
+.container{
+    background-color: rgb(66, 65, 65);
+    width: 100%;
+    height: 100vh;
+}
+
+h1{
+    font-family: 'Secular One', sans-serif;
+    font-size: 100px;
+    color: rgb(154, 199, 109);
+
+}
+
+h2{
+    font-family: 'Nanum Gothic', sans-serif;
+    color: thistle;
+}
+
+img{
+    max-width: 500px;
+    margin-top: 4em;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}

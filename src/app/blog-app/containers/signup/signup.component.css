@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&display=swap');
+.login{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    font-family: 'Noto Sans JP', sans-serif;  
+    align-items: center;
+    height: 90vh;
+}
+
+
+img{
+    max-width: 60px;
+}
+
+.logo{
+    box-shadow: rgb(88, 88, 85) 0px 5px;
+    background-color: rgba(240, 240, 240, 0.562);
+    padding: 30px;
+    min-height: 380px;
+    margin: 0 20px;
+}
+
+h4, .img-wrapper, .signup{
+    text-align: center;
+}
+
+button{
+    height: 35px;
+    background-color: rgb(27, 163, 134);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+}
+
+button:hover{
+    background-color: gray;
+    color: blanchedalmond;
+    border: none;
+}
+
+button > a{
+    color: white;
+    text-decoration: none;
+} 
+
+.showPass{
+    margin-top: 6px;
+}
+
+small{
+    color: red;
+}
+
+.success{
+    background-color: blue;
+}
+
+.invalid{
+    background-color: burlywood;
+}

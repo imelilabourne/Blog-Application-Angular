@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Peddana&display=swap');
+nav{
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    line-height: 60px;
+    background: linear-gradient(90deg, #408EBA 50%, #102539 50%);
+    padding: 0 30px;
+    color: white;
+    align-items: center;
+}
+
+
+#sidebar > ul > li{
+    list-style-type: none;
+    font-size: 18px;
+
+}
+
+#sidebar > p{
+    width: inherit;
+    height: 50px;
+    line-height: 50px;
+    background: #102539;
+    padding-left: 20px;
+    font-size: 20px;
+}
+
+#sidebar{
+    position: absolute;
+    width: 250px;
+    left: 0px;
+    background: #222D32;
+    color: white;
+    display: none;
+}
+
+.icon-wrapper > img{
+    width: 100px;
+}

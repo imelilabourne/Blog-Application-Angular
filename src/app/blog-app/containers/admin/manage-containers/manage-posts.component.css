@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Peddana&display=swap');
+.manage-table{
+    margin: 0 100px;
+    font-size: 16px;
+    background-color: #c9dce7;
+    padding: 20px 0;
+    border-radius: 5px;
+    box-shadow: 4px 4px  #3481ad;
+    
+}
+
+*{
+    font-family: 'Peddana', serif;
+    font-size: 22px;
+}
+tbody > tr:nth-child(even){
+    background-color:#408EBA;
+    color: white;
+}
+
+.modal.show{
+    display: block;
+}
+
+button{
+    margin-right: 6px;
+}

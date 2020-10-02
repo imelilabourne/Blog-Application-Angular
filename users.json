@@ -1,0 +1,84 @@
+{
+  "admin": {
+    "username": "admin",
+    "password": "1234"
+  },
+  "users": [
+    {
+      "id": 1,
+      "username": "imelilabourne",
+      "password": "123",
+      "firstname": "Eli Labourne",
+      "lastname": "de Torres",
+      "email": "email@yahoo.com"
+    },
+    {
+      "id": 2,
+      "username": "johnmayer",
+      "password": "123",
+      "firstname": "John",
+      "lastname": "Mayer",
+      "email": "email@yahoo.com"
+    }
+  ],
+  "blogs": [
+    {
+      "title": "Japan Blog",
+      "content": "Hopefully more chances to improve over the coming days (and later this evening, when it will hopefully emerge on the other side of the tree)",
+      "username": "imelilabourne",
+      "imageUrl": "../../../assets/1.jpeg",
+      "date": 1601262062332,
+      "id": 1
+    },
+    {
+      "title": "Day in a life of a CPE Student",
+      "content": "a common raven with leucism. leucism is similar to albinism, but is a partial lack of many pigments, not a complete loss.",
+      "username": "johnmayer",
+      "imageUrl": "../../../assets/2.jpg",
+      "date": 1601260152332,
+      "id": 2
+    },
+    {
+      "title": "US Blog",
+      "content": "Physician wellness and mental health, particularly in medical education, is not a topic I thought I would be passionate about but somehow during my training, it happened. (Long story.) May is Mental Health Awareness Month. In honor of this month, I would like to post some content covering topics affecting",
+      "username": "imelilabourne",
+      "imageUrl": "../../../assets/3.jpg",
+      "date": 1601270161332,
+      "id": 3
+    },
+    {
+      "title": "Title 4",
+      "content": "Last December, I wen to camping in Tagaytay with my friends",
+      "username": "johnmayer",
+      "imageUrl": "../../../assets/4.jpg",
+      "date": 1601272162232,
+      "id": 4
+    }
+  ],
+  "pending": [
+    {
+      "title": "helloulit",
+      "content": "try muna",
+      "username": "admin",
+      "imageUrl": "../../../assets/5.jpg",
+      "date": 1601436121258,
+      "id": 91
+    },
+    {
+      "title": "Music Award 2020",
+      "content": "The awards, honoring the most-played artists",
+      "username": "johnmayer",
+      "imageUrl": "../../../assets/5.jpg",
+      "date": 1601529059661,
+      "id": 93
+    },
+    {
+      "title": "new Title",
+      "content": "asdfasfsafsaf",
+      "username": "admin",
+      "date": 1601539572184,
+      "id": 94
+    }
+  ],
+  "drafts": []
+}
