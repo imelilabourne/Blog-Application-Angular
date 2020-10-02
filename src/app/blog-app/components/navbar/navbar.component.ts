@@ -9,7 +9,7 @@ import { Component } from '@angular/core';
             <div class="logo">Blg</div>
             <div class="links">
                 <a routerLink="/users"><i class="fa fa-home"></i></a>
-                <a routerLink="/profile"><i class="fa fa-user-circle"></i></a>
+                <a *ngIf="user !=='admin' " routerLink="/profile"><i class="fa fa-user-circle"></i></a>
                 <a><i class="fa fa-poll"></i></a>
             </div>
             <a routerLink="/login" (click)="removeUser()" class="logout">Logout</a>
@@ -18,6 +18,7 @@ import { Component } from '@angular/core';
 })
 export class NavbarComponent {
 
+    user = localStorage.getItem('user');
     removeUser(){
         localStorage.clear()
     }

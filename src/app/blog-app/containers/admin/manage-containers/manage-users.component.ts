@@ -4,9 +4,15 @@ import { User } from '../../interfaces/auth-form.interface';
 
 @Component({
     selector: 'manage-users',
-    styleUrls: ['manage-posts.component.css'],
+    styleUrls: ['manage-users.component.css'],
     template: `
-    <div class="manage-table">
+
+    <div>
+      <admin-nav></admin-nav>
+      <div class="content">
+          <a routerLink="/admin">Go to admin</a>
+          <p>Manage Users</p>
+          <div class="manage-table">
           <table class="table table-striped">
             <thead>
               <tr>
@@ -24,6 +30,10 @@ import { User } from '../../interfaces/auth-form.interface';
             </tbody>
           </table>
         </div>
+          <hr>
+      </div>
+    </div>
+    
     `
 })
 

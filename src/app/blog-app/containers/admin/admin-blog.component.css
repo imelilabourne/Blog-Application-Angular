@@ -1,17 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Peddana&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 p{
     text-align: center;
     margin: 20px 0;
-    font-size: 40px;
+    font-size: 30px;
+}
+
+
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+.content{
+    margin-top: 90px;
 }
 
 a{
-    font-size: larger;
-}
-*{
-    font-family: 'Peddana', serif;
-}
-
-.link{
-    text-align: center;
+    right: 20px;
+    font-size: 14px;
+    position: absolute;
 }

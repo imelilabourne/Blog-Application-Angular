@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Peddana&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 .manage-table{
     margin: 0 100px;
+    font-size: 16px;
     background-color: #c9dce7;
     padding: 20px 0;
     border-radius: 5px;
@@ -24,4 +24,26 @@ tbody > tr:nth-child(even){
 
 button{
     margin-right: 6px;
+}
+
+.content{
+    margin-top: 90px;
+}
+
+
+p{
+    text-align: center;
+    margin: 20px 0;
+    font-size: 30px;
+}
+
+
+.content{
+    margin-top: 90px;
+}
+
+a{
+    right: 20px;
+    font-size: 14px;
+    position: absolute;
 }

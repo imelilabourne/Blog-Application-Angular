@@ -36,6 +36,8 @@ import { User } from '../interfaces/auth-form.interface';
           </button>
           <div class="signup"><a routerLink="/signup">Create New Account</a></div>
       </form>
+
+      
       </div>
     </div>
     
@@ -51,6 +53,13 @@ export class LoginComponent {
   
   
   admin: User;
+  
+
+  form = this.fb.group({
+    username: ['', Validators.required],
+    password: ['', Validators.required]
+  })
+
   ngOnInit(){
     this.loginService.getAdmin()
       .subscribe(data => this.admin = data );
@@ -59,16 +68,10 @@ export class LoginComponent {
       .subscribe(data => this.users = data);
   }
 
-  form = this.fb.group({
-    username: ['', Validators.required],
-    password: ['', Validators.required]
-  })
-
-
+  
   onSubmit(value: User) {
 
     if(value.username === this.admin.username && value.password === this.admin.password){
-      // console.log("You are an admin user")
       this.router.navigate(['/admin']);
       localStorage.setItem("user", this.admin.username);
     }
@@ -76,12 +79,12 @@ export class LoginComponent {
     else{
         
       this.users.map((item) => {
-        if(value.username !== item.username && value.password !== item.password){
-          alert("You are not registered, please sign up");
-        }
-        else{
+        if(value.username === item.username && value.password === item.password){
           this.router.navigate(['/users']);
           localStorage.setItem("user", item.username);
+        }
+        else{
+          
         }
       })
 

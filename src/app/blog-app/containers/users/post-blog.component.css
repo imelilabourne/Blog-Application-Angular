@@ -1,26 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Sansita+Swashed:wght@300&display=swap');
+
+div, p, h2, text-area, input, button{
+    font-family: 'Sansita Swashed', cursive;
+    font-size: 18px;
+}
+
 img{
     max-width: 250px;
 }
 
-.post{
-    border: 1px black;
-}
-
-button{
-    margin-left: 6px;
-}
-
-.title{
-    /* text-align: center; */
-    padding-left: 20px;
-    border: 2px black;
-    line-height: 50px;
-    font-size: 20px;
-    background-color: rgb(26, 53, 85);
-    color: white;
-    margin: 0 10px;
-    width: 100%;
-}
 
 .content{
     height: 10em;
@@ -29,25 +17,33 @@ button{
 .container{
     width: 60%;
     min-width: 500px;
-}
-
-
-.row{
-    padding: 0 !important;
-    margin: 0;
+    margin-top: 80px;
 }
 
 
 .openDraft{
     display: block;
-    width: 40px;
+    width: 160px;
+    font-size: 20px;
     height: 40px;
     line-height: 40px;
     color: white;
     position: absolute;
-    left: 220px;
-    top: 8px;
-    background-color: #001935;
+    left: 0px;
+    top: 70px;
+    background-color: #0e59afb4;
+    position: fixed;
+    padding-left: 10px;
+    border-radius: 20px;
+    font-family: 'Sansita Swashed', cursive;
+}
+
+button{
+    margin-right: 4px;
+}
+
+.fa-paint-brush{
+    margin-left: 10px;
 }
 
 .openDraft .card{
@@ -58,17 +54,23 @@ button{
     visibility: visible;
 }
 
-.openDraft:hover .fa{
+.openDraft:hover .draft-sticky{
     visibility: hidden;
 }
 
-
-
+.draft-sticky{
+    padding-left: 10px;
+}
 .openDraft:hover{
-    width: 70%;
-    height: 100%;
-    position: absolute;
-    background-color: rgba(139, 139, 128, 0.836);
+    width: 100%;
+    /* margin: auto; */
+    margin-top: 90px;
+    height: 100vh;
+    margin-top: -20px;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.836);
+    border-radius: 0;
+    overflow-y: scroll;
 }
 
 
@@ -87,6 +89,14 @@ div > i {
     color: teal;
 }
 
+
+.draft-title{
+    width: 100%;
+    margin-left: 0px;
+    display: flex;
+    align-items: center;
+}
+
 .panel .panel-body{
     display: none;
 }
@@ -95,18 +105,29 @@ div > i {
     display: block;
 }
 
-.posts > div{
-   margin: 20px;
-   padding: 10px;
-   border: solid 1px rgb(197, 193, 193);
-   
+
+
+
+.title{
+    background-color: rgb(26, 53, 85);
+    padding-left: 20px;
+    line-height: 40px;
+    font-size: 20px;
+    background-color: rgb(26, 53, 85);
+    color: white;
+    margin-top: 0px;
+    font-family: 'Courgette', cursive;
+    letter-spacing: 2px ;
 }
 
-.date{
-    float: right;
-    margin-right: 20px; 
-    color: gray;
+
+.post-container{
+   margin: 20px;
+   padding: 10px;
+   /* border: solid 1px rgb(197, 193, 193); */
+   box-shadow: rgb(148, 145, 145) 0 3px;
 }
+
 
 i {
     color: white;
@@ -117,19 +138,25 @@ i {
     width: inherit;
 }
 
-/* .image-wrapper{
-    width: 200px;
-    height: 100px;
-    border: 1px solid;
-}
-
-.image-wrapper > img{
-    width: 100%;
-} */
-
 .blog-post-inner{
     display: flex;
+
 }
+
+/* text in blog post */
+.blog-text-inner, .image-wrapper{
+    padding: 0 20px;
+    margin-left: 6px;
+    width: 100%;
+    }
+/*  */
+.blog-text-inner{
+    
+    padding: 10px;
+    margin: 0 20px;
+}
+
+
 
 .blog-post-inner > .image-wrapper > img{
     transition: transform .5s;
@@ -139,12 +166,19 @@ i {
 .image-wrapper{
     display: grid;
     align-self: center;
+    margin-left: 6px;
+    width: 250px;
 }
 
 .blog-post-inner > .image-wrapper > img:hover{
     transform: scale(1.2);
 }
 
-.span{
-    margin: 0 20px;
+.date{
+    float: right;   
 }
+
+.date, .span{
+    color: gray;
+}
+

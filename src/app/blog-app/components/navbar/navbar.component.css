@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&family=Rochester&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Sansita+Swashed:wght@300&display=swap');
 
 nav, a{  
     color: white;
@@ -9,7 +10,17 @@ nav{
     background-color:#001935;
     height: 50px;
     line-height: 50px;
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Courgette', cursive;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    letter-spacing: 3px;
+    text-decoration: none;    
+}
+
+nav >a:hover{
+    color: rgb(175, 179, 159);
+    text-decoration: none;
 }
 
 .links > a{

@@ -5,34 +5,16 @@ import { Component, OnInit } from '@angular/core';
     styleUrls: [`admin-nav.component.css`],
     template: `
     <nav> 
-        <h3>TERA</h3>
-        <div>
-            <h3>ADMIN</h3>
+        <h3>ADMIN</h3>
+        <div class="link-div">
+            <div class="link"><a routerLink="/users">Go to home</a></div>
+            <div class="link"><a routerLink="/login" (click)="removeUser()" class="logout">Logout</a></div>
         </div>
     </nav>
     <!-- <div class="icon-wrapper">
             <img src="../../../../assets/admin-icon.jpg">    
         </div> -->
         
-    <div id="sidebar">
-        <div class="icon-wrapper">
-            <img src="../../../../assets/admin-icon.jpg">    
-        </div>
-        <ul>
-            <li>
-                Manage Post
-            </li>
-        </ul><ul>
-            <li>
-                Manage Users
-            </li>
-        </ul><ul>
-            <li>
-                Manage Topics
-            </li>
-        </ul>
-        
-    </div>
     
     `
 })
@@ -41,6 +23,10 @@ export class AdminNavComponent implements OnInit {
     constructor() { }
 
     ngOnInit() { }
+
+    removeUser(){
+        localStorage.clear()
+    }
 
   
 }

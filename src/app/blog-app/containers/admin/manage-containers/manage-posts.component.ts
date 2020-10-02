@@ -16,7 +16,7 @@ import { Blog } from '../../interfaces/composeBlog.interface';
                 <th scope="col">Content</th>
                 <th scope="col">Author</th>
                 <th scope="col">Date Posted</th>
-                <th scope="col">Approve</th>
+                <th scope="col">Action</th>
               </tr>
             </thead>
             <tbody>
@@ -29,9 +29,9 @@ import { Blog } from '../../interfaces/composeBlog.interface';
 
                 <td class="col-md-2">
                   <button type="button" class="btn btn-info" (click)="approvedPost(blog)"  data-toggle="modal" data-target="#modal">
-                    Publish
+                    Approve
                   </button>
-                  <button type="button" class="btn btn-warning" (click)="showModaldeny=true">
+                  <button type="button" class="btn btn-danger" (click)="showModaldeny=true">
                     Deny
                   </button>
                 </td>
