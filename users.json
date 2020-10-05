@@ -114,7 +114,7 @@
     {
       "title": "Another draft",
       "content": "Although a form submit to /refresh_token will work and a new access token will be returned, the attacker can't read the response if they're using an HTML form.",
-      "username": "imelilabourne",
+      "username": "johnmayer",
       "date": 1601873247777,
       "id": 3
     }

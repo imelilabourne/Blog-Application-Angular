@@ -14,16 +14,17 @@ import { Blog } from '../interfaces/composeBlog.interface';
     
     <p class="draft-sticky">Open Drafts<i class="fa fa-paint-brush"></i></p>
     
-    <div class="card card-body">
+    <div class="card card-body" >
       <div *ngFor="let draft of drafts">
       <form [formGroup]="editContent">
 
-        <div class="draft-container">
-          <div class="title row draft-title">
+        <div class="draft-container" *ngIf="loggedInUser === draft.username">
+          <div class="title row draft-title" >
             <div class="col-md-9 col-sm-6">
               <div *ngIf="bool; else editingDraft">
               <div>
-              <h2>{{ draft.title }}</h2></div>
+              <h2>{{ draft.title }}</h2>
+            <small>{{ draft.username }}</small></div>
               </div>
                 <ng-template #editingDraft><input (keyup.enter)="editFunc(draft)" class="editInput" placeholder="Enter new title" [value]="draft.title" formControlName="newTitle"></ng-template>
               </div>
