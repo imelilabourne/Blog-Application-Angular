@@ -29,8 +29,8 @@ import { User } from '../interfaces/auth-form.interface';
         </div>
         <div class="form-group input ">
             <input class="form-control" placeholder="Password" type="password"  [type]="pass" name="password" formControlName="password">
-            <input class="showPass" type="checkbox" (click)="myFunction()"> Show Password
-            <small *ngIf="signupForm.controls.password.invalid && signupForm.controls.password.touched">This is Required</small>  
+            <div *ngIf="signupForm.controls.password.dirty"><input class="showPass" type="checkbox" (click)="myFunction()"> Show Password</div>
+            <small *ngIf="signupForm.controls.password.invalid && signupForm.controls.password.touched">This is Required (8 minimum characters)</small>  
           </div>
         <div class="form-group input">
           <label>

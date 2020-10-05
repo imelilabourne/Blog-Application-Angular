@@ -25,3 +25,7 @@ tbody > tr:nth-child(even){
 button{
     margin-right: 6px;
 }
+
+.dis{
+    text-decoration: line-through;
+}

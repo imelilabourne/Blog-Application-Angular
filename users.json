@@ -1,24 +1,29 @@
 {
-  "admin": {
-    "username": "admin",
-    "password": "1234"
-  },
   "users": [
     {
       "id": 1,
+      "username": "admin",
+      "password": "1234",
+      "role": 0
+    },
+    {
+      "id": 2,
       "username": "imelilabourne",
       "password": "123",
       "firstname": "Eli Labourne",
       "lastname": "de Torres",
-      "email": "email@yahoo.com"
+      "email": "email@yahoo.com",
+      "role": 1
     },
     {
-      "id": 2,
+      "id": 3,
       "username": "johnmayer",
       "password": "123",
       "firstname": "John",
       "lastname": "Mayer",
-      "email": "email@yahoo.com"
+      "email": "email@yahoo.com",
+      "role": 1
+
     }
   ],
   "blogs": [
@@ -59,9 +64,7 @@
       "username": "imelilabourne",
       "date": 1601626375675,
       "id": 96
-    }
-  ],
-  "pending": [
+    },
     {
       "title": "Music Award 2020",
       "content": "The awards, honoring the most-played artists",
@@ -69,7 +72,9 @@
       "imageUrl": "../../../assets/5.jpg",
       "date": 1601529059661,
       "id": 93
-    },
+    }
+  ],
+  "pending": [
     {
       "title": "Here’s something cute",
       "content": "When lockdown happened in the UK it happened very suddenly. At the law firm I work at, our office building emptied overnight when everyone was told to work from home. No time to clear our desks, no time to bring office plants home.\n\nFast forward three and a half months - everyone assumes that their plants are dead.",

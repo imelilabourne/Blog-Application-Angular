@@ -20,7 +20,7 @@ import { Blog } from '../../interfaces/composeBlog.interface';
               </tr>
             </thead>
             <tbody>
-              <tr *ngFor="let blog of blogs; let i = index">
+              <tr *ngFor="let blog of blogs; let i = index"  >
                 <th scope="row">{{ i + 1 }}</th> 
                 <td class="col-md-2">{{ blog.title }}</td>
                 <td class="col-md-4">{{ blog.content }}</td>
@@ -31,7 +31,7 @@ import { Blog } from '../../interfaces/composeBlog.interface';
                   <button type="button" class="btn btn-info" (click)="approvedPost(blog)"  data-toggle="modal" data-target="#modal">
                     Approve
                   </button>
-                  <button type="button" class="btn btn-danger" (click)="showModaldeny=true">
+                  <button type="button" class="btn btn-danger"  (click)="showModaldeny=true; deniedClasss(blog)">
                     Deny
                   </button>
                 </td>
@@ -72,7 +72,7 @@ import { Blog } from '../../interfaces/composeBlog.interface';
             <p>Are you sure you want to deny?</p>
           </div>
           <div class="modal-footer">
-            <button class="btn btn-warning" (click) ="deniedPost();status=!status" [ngClass] = "status ? 'sucess' : 'danger'">Yes</button>
+            <button class="btn btn-warning" (click) ="deniedPost()">Yes</button>
             <button class="btn btn-danger" (click)="showModaldeny = false">Cancel</button>
           </div>
         </div>
@@ -86,6 +86,9 @@ export class ManagePostComponent{
   id: number;
   showModal: boolean = false;
   showModaldeny: boolean = false;
+
+  // deniedClass: boolean = false;
+
   constructor( private blogService: BlogService){}
 
   user = localStorage.getItem('user');
@@ -111,5 +114,9 @@ export class ManagePostComponent{
 
   deniedPost(){
     alert("Post Request Deniied")
+  }
+
+  deniedClasss(blog){
+    
   }
 }

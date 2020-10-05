@@ -10,7 +10,8 @@ import { User } from '../interfaces/auth-form.interface';
   selector: 'login-blog',
   styleUrls: ['login.component.css'],
   template: `
-
+<div class="alert alert-danger" *ngIf="showMsg">You are not registered, please sign up
+        </div>
     <div class="login">
       <div class="logo">
         <img src="../../../assets/login.png">
@@ -31,13 +32,11 @@ import { User } from '../interfaces/auth-form.interface';
         </div>
         <small *ngIf="form.controls.password.invalid && form.controls.password.touched">This is Required</small>
         <br>
-          <button type="submit">
+          <button type="submit" [disabled]= "form.invalid">
              Login
           </button>
           <div class="signup"><a routerLink="/signup">Create New Account</a></div>
       </form>
-
-      
       </div>
     </div>
     
@@ -51,7 +50,7 @@ export class LoginComponent {
   
   users: User[];
   
-  
+  showMsg: boolean = false;
   admin: User;
   
 
@@ -60,36 +59,36 @@ export class LoginComponent {
     password: ['', Validators.required]
   })
 
-  ngOnInit(){
-    this.loginService.getAdmin()
-      .subscribe(data => this.admin = data );
-    
-    this.loginService.getUsers()
-      .subscribe(data => this.users = data);
-  }
-
   
   onSubmit(value: User) {
 
-    if(value.username === this.admin.username && value.password === this.admin.password){
-      this.router.navigate(['/admin']);
-      localStorage.setItem("user", this.admin.username);
-    }
+    // this.loginService.getAdmin()
+    // .subscribe(data => {
+    //   if(value.username === data.username && value.password === data.password){
+    //     this.router.navigate(['/admin']);
+    //     localStorage.setItem("user", data.username);
+    //   }
+    // })
     
-    else{
-        
-      this.users.map((item) => {
-        if(value.username === item.username && value.password === item.password){
+    
+    this.loginService.getUsers()
+    .subscribe(data => {
+      data.map((item) => {
+        if(value.username === item.username && value.password === item.password && item.role === 1){
           this.router.navigate(['/users']);
           localStorage.setItem("user", item.username);
         }
+        else if(value.username === item.username && value.password === item.password && item.role === 0){
+          this.router.navigate(['/admin']);
+          localStorage.setItem("user", item.username);
+        }
         else{
-          
+          this.showMsg = true;
         }
       })
-
+    })
+        
     }
  
-  }
 
 }
