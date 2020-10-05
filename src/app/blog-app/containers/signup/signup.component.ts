@@ -71,7 +71,7 @@ export class SignupBlogComponent{
       .subscribe((data: User) => console.log(data));
     }
     else{
-      alert("Mali ang password");
+      alert("Registration Failed");
     }
 
 

@@ -16,21 +16,37 @@ import { Blog } from '../interfaces/composeBlog.interface';
     
     <div class="card card-body">
       <div *ngFor="let draft of drafts">
+      <form [formGroup]="editContent">
+
         <div class="draft-container">
           <div class="title row draft-title">
-            <div class="col-md-9 col-sm-6"><div *ngIf="bool; else editingTask"><h2>{{ draft.title }}</h2></div>
-              <ng-template #editingTask><input (keyup.enter)="editFunc(draft)" class="editInput" placeholder="Enter new title" [value]="draft.title" ></ng-template>
-            </div>
+            <div class="col-md-9 col-sm-6">
+              <div *ngIf="bool; else editingDraft">
+              <div>
+              <h2>{{ draft.title }}</h2></div>
+              </div>
+                <ng-template #editingDraft><input (keyup.enter)="editFunc(draft)" class="editInput" placeholder="Enter new title" [value]="draft.title" formControlName="newTitle"></ng-template>
+              </div>
             
             <div class="col-md-3 col-sm-6">
               <button class="btn btn-primary" (click)="movetoPending(draft)">Post</button>
-              <button class="btn btn-info" (click)="toggle()" >Edit</button>
+              <button  *ngIf="bool; else cancel" class="btn btn-info" (click)="toggle()" >Edit</button>
+              <ng-template #cancel><button class="btn btn-danger" (click)="toggle()">Cancel</button></ng-template>
+
+              
               <button class="btn btn-danger" (click)="removeDraft(draft)">Remove</button>
             </div>
           </div>
-          
-          <div class="draft-content">{{ draft.content }}</div>
+          <div *ngIf="bool; else editingContent">
+            <div class="draft-content">{{ draft.content }}</div>
+          </div>
+          <ng-template #editingContent><textarea class="form-control draft-content black" placeholder="Enter new content" [value]="draft.content" formControlName="newContent">
+            
+          </textarea><button class="btn btn-info btn-block" (click)="editFunc(draft); toggle()" >Done</button></ng-template>
+            
         </div>
+    </form>
+
       </div>   
     </div>
   </div>
@@ -123,7 +139,6 @@ export class PostBlogComponent {
   id: number;
   image: string;
   bool: boolean = true;
-  newTitle: string;
 
   showMsg: boolean = false;
   showMsgDraft: boolean = false;
@@ -134,7 +149,6 @@ export class PostBlogComponent {
   loggedInUser = localStorage.getItem("user");
   
   constructor(private fb: FormBuilder, 
-    private service: LoginService, 
     private draftService: DraftService,
     private blogService: BlogService){
     this.blogService.getBlog()
@@ -152,6 +166,11 @@ export class PostBlogComponent {
     content: ""
   })
 
+  editContent = this.fb.group({
+    newTitle: "",
+    newContent: ""
+  })
+
   
   ngOninit(){
     
@@ -162,15 +181,20 @@ export class PostBlogComponent {
   }
 
   editFunc(event: Blog){
-    // this.title = Object.assign({}, this.title, draft.title);
 
     this.draftService.editDraft(event)
       .subscribe(data => this.drafts = this.drafts.map((draft) => {
         if(draft.title === event.title){
-          draft.title = Object.assign({}, this.title, draft.title);
-        }
-        console.log(draft);
+          draft = Object.assign({}, draft, {
+            title: this.editContent.get('newTitle').value,
+            content: this.editContent.get('newContent').value,
+            username: this.loggedInUser,
+            date: this.date
 
+          });
+
+        }
+        console.log(draft)
         return draft;
       }));
     
@@ -186,7 +210,7 @@ export class PostBlogComponent {
       .subscribe(data => this.blogs.push(this.postForm.value));
       this.showMsg= true;
 
-
+      
       this.postForm.get("title").patchValue('');
       this.postForm.get("content").patchValue('');
   }
@@ -196,13 +220,19 @@ export class PostBlogComponent {
     this.showMsgDraft = false;
   }
   addDrafts(){
-    this.blogs.filter((item) => item);
+
 
     this.draftService.addDraft(this.postForm.value, {
       username: this.loggedInUser,
       date: this.date
     })
-      .subscribe((data) => this.blogs = this.blogs.filter((item)=> item ));
+      .subscribe((data) => console.log(data));
+      this.drafts.push({
+        title: this.postForm.get('title').value,
+        content: this.postForm.get('content').value,
+        date: this.date,
+        username: this.loggedInUser,
+        imageUrl: this.image})
       this.showMsgDraft= true;
       this.postForm.get("title").patchValue('');
       this.postForm.get("content").patchValue('');

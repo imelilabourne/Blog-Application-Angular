@@ -71,6 +71,7 @@ button{
     background-color: rgba(0, 0, 0, 0.836);
     border-radius: 0;
     overflow-y: scroll;
+    z-index: 1;
 }
 
 
@@ -136,6 +137,17 @@ i {
 .editInput{
     background-color: rgb(26, 53, 85);
     width: inherit;
+}
+
+.black{
+    min-height: 100px;
+    max-width: 97%;
+    border: none;
+    font-size: 18px;
+}
+
+.black:focus{
+    border: none;
 }
 
 .blog-post-inner{

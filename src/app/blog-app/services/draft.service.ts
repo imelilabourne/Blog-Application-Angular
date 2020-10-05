@@ -3,7 +3,7 @@ import { HttpClient, HttpHeaders} from "@angular/common/http";
 import { Observable } from 'rxjs';
 import { User } from '../containers/interfaces/auth-form.interface';
 import { Blog } from '../containers/interfaces/composeBlog.interface';
-
+import { map } from "rxjs/operators"; 
 @Injectable()
 export class DraftService{
 
@@ -21,8 +21,10 @@ export class DraftService{
         })
     }
 
-    editDraft(draft): Observable<Blog>{
-        return this.http.put<Blog>("http://localhost:3000/drafts" + "/" + draft.id, draft)
+    editDraft(draft: Blog): Observable<Blog[]>{
+        return this.http
+        .put("http://localhost:3000/drafts" + "/" + draft.id, draft)
+        .pipe(map((res:any) => res));
     }
 
     deleteDraft(id: number):Observable<User>{

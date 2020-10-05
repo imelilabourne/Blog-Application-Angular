@@ -23,7 +23,6 @@
       "lastname": "Mayer",
       "email": "email@yahoo.com",
       "role": 1
-
     }
   ],
   "blogs": [
@@ -99,11 +98,25 @@
   ],
   "drafts": [
     {
-      "title": "My blog for today 101",
-      "content": "fI’d like to offer my artists rendition of the monster I would see standing in my room when I had night terrors, as well as a drawing of the being (woman? Girl? Spirit?) who banished it in a very vivid dream I had. I don’t know how but ever since I dreamed that the monster got banished, I just stopped having night terrors all together. Any info on wtf any of this could mean would be greatly appreciated.",
-      "username": "johnmayer",
-      "date": 1601623110287,
-      "id": 94
+      "title": "Why is this safe from CSRF?",
+      "content": "Although a form submit to /refresh_token will work and a new access token will be returned, the attacker can't read the response if they're using an HTML form.",
+      "username": "imelilabourne",
+      "date": 1601872852748,
+      "id": 1
+    },
+    {
+      "title": "New draft",
+      "content": "Insert Content",
+      "username": "imelilabourne",
+      "date": 1601873247777,
+      "id": 2
+    },
+    {
+      "title": "Another draft",
+      "content": "Although a form submit to /refresh_token will work and a new access token will be returned, the attacker can't read the response if they're using an HTML form.",
+      "username": "imelilabourne",
+      "date": 1601873247777,
+      "id": 3
     }
   ]
 }
