@@ -3,11 +3,11 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'users-blog',
   template:`
-    <div class="main">
+  <div class="flex evenly-flex">
         <navbar-blog></navbar-blog>
-        <post-blog></post-blog>
-        <home-blog></home-blog>
-    </div>
+        <app-blogs></app-blogs>
+        <app-rigthbar></app-rigthbar>
+  </div>
   ` 
   ,
   styleUrls: ['./users-blog.component.css']

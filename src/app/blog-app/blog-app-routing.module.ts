@@ -6,7 +6,7 @@ import { ManageUserComponent } from './containers/admin/manage-containers/manage
 import { LoginComponent } from './containers/login/login.components';
 import { NotFoundComponent } from './containers/not-found.component';
 import { SignupBlogComponent } from './containers/signup/signup.component';
-import { ProfileBlogComponent } from './containers/users/profile-blog.compoenent';
+import { ProfileBlogComponent } from './containers/users/profile/profile-blog.compoenent';
 import { UsersBlogComponent } from './containers/users/users-blog.component';
 
 const routes: Routes = [

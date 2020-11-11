@@ -4,17 +4,12 @@ import { Component } from '@angular/core';
   selector: 'navbar-blog',
   styleUrls: ['navbar.component.css'],
   template:`
-    <div>
-        <nav>
+        <div class="sidebar">
             <div class="logo">Blg</div>
-            <div class="links">
-                <a routerLink="/users"><i class="fa fa-home"></i></a>
-                <a *ngIf="user !=='admin' " routerLink="/profile"><i class="fa fa-user-circle"></i></a>
-                <a><i class="fa fa-poll"></i></a>
-            </div>
+            <div><a routerLink="/users"><i class="fa fa-home"> Home</i></a></div>
+            <div><a *ngIf="user !=='admin' " routerLink="/profile"><i class="fa fa-user-circle"> Profile</i></a></div>
             <a routerLink="/login" (click)="removeUser()" class="logout">Logout</a>
-        </nav>
-    </div>`,
+        </div>`,
 })
 export class NavbarComponent {
 

@@ -1,8 +1,8 @@
 import { Component } from "@angular/core";
-import { BlogService } from "../../services/blog.service";
-import { LoginService } from "../../services/login.service";
-import { User } from "../interfaces/auth-form.interface";
-import { Blog } from "../interfaces/composeBlog.interface";
+import { BlogService } from "../../../services/blog.service";
+import { LoginService } from "../../../services/login.service";
+import { User } from "../../interfaces/auth-form.interface";
+import { Blog } from "../../interfaces/composeBlog.interface";
 
 @Component({
     selector: 'profile-blog',
@@ -71,7 +71,7 @@ export class ProfileBlogComponent{
             const currentUser = localStorage.getItem('user'); 
             if(users.username === currentUser){
               this.username = users.username;
-              this.service.getBlog()
+              this.service.getBlogs()
                 .subscribe(data=> data.map(blog => {
                   if(currentUser === blog.username){
                     this.blogs.push(blog);

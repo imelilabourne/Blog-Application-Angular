@@ -1,0 +1,13 @@
+.sidebar{
+    width: 280px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 30px;
+}
+
+.wrapper{
+    background-color: rgb(236, 235, 231);
+    border-radius: 20px;
+    padding: 20px;
+}

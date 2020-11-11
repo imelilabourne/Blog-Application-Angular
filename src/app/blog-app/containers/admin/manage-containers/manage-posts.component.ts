@@ -95,10 +95,6 @@ export class ManagePostComponent{
   
   status: boolean = false;
   ngOnInit(){
-    this.blogService.getPendingPost()
-      .subscribe(data => this.blogs = data);
-
-    console.log(this.user);
   }
 
   approvedPost(blog){

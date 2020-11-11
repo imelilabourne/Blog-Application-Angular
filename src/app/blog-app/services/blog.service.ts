@@ -9,7 +9,7 @@ import { Blog } from "../containers/interfaces/composeBlog.interface";
 export class BlogService{
 
     constructor(private http: HttpClient){}
-    getBlog():Observable<Blog[]>{
+    getBlogs():Observable<Blog[]>{
         return this.http.get<Blog[]>("http://localhost:3000/blogs")
     }
 
@@ -21,17 +21,17 @@ export class BlogService{
         })
     }
     
-    getPendingPost(): Observable<Blog[]>{
-        return this.http.get<Blog[]>("http://localhost:3000/pending")
-    }
+    // getPendingPost(): Observable<Blog[]>{
+    //     return this.http.get<Blog[]>("http://localhost:3000/pending")
+    // }
 
-    addPending(blog1, blog): Observable<Blog>{
-        return this.http.post<Blog>("http://localhost:3000/pending", {...blog1 ,...blog}, {
-            headers: new HttpHeaders({
-                'Content-Type': 'application/json'
-            })
-        })
-    }
+    // addPending(blog1, blog): Observable<Blog>{
+    //     return this.http.post<Blog>("http://localhost:3000/pending", {...blog1 ,...blog}, {
+    //         headers: new HttpHeaders({
+    //             'Content-Type': 'application/json'
+    //         })
+    //     })
+    // }
 
     removePending(id:number): Observable<Blog>{
         return this.http.delete<Blog>("http://localhost:3000/pending" + "/" + id);
