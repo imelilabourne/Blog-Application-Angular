@@ -5,7 +5,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['rigthbar.component.css'],
   template: `
     <div class="sidebar">
-        <input class="form-group" placeholder="Search"/>
+      <div class="flex search-div">
+        <input class="search" placeholder="Search"/><i class="fa fa-search"></i>
+      </div>  
         <div class="wrapper">
           <h4>
           Trending
@@ -23,7 +25,6 @@ import { Component, OnInit } from '@angular/core';
         </div>
     </div>
   `,
-  styles: []
 })
 export class RigthbarComponent implements OnInit {
 

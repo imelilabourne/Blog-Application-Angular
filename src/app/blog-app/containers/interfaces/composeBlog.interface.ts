@@ -4,6 +4,6 @@ export interface Blog{
     imageUrl: string,
     username: string,
     status: string,
-    date: number,
+    date: Date,
     id?: number
 }

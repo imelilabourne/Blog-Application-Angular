@@ -2,9 +2,30 @@ img {
     width: 500px;
     height: 200px;
     object-fit: cover;
-  }
+}
+
+/* img:hover{
+    transform: scale(1.1);
+    height: auto;
+    position: absolute;
+    transform: translate(50px, -30px);
+} */
 .interaction> a > i{
     font-size: 20px;
+}
+
+.username{
+    font-style: italic;
+    opacity: .2;
+    font-size: .5em;
+    line-height: 38px;
+}
+
+.date{
+    float: right;
+    font-size: .5em;
+    line-height: 38px;
+
 }
 
 .blog-img-wrapper{

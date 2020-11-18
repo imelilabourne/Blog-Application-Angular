@@ -12,7 +12,8 @@
       "password": "123",
       "firstname": "Eli Labourne",
       "lastname": "de Torres",
-      "email": "email@yahoo.com",
+      "email": "elilabourne.detorres@yahoo.com",
+      "imageUrl": "../../../assets/portfolio.jpg",
       "role": 1
     },
     {
@@ -23,6 +24,9 @@
       "lastname": "Mayer",
       "email": "email@yahoo.com",
       "role": 1
+    },
+    {
+      "id": 4
     }
   ],
   "blogs": [
@@ -53,62 +57,15 @@
       "id": 3
     },
     {
-      "title": "Title 4",
-      "content": "Last December, I wen to camping in Tagaytay with my friends",
-      "username": "johnmayer",
-      "imageUrl": "../../../assets/4.jpg",
-      "date": 1601272162232,
-      "status": "forApproval",
-      "id": 4
-    },
-    {
       "title": "How to make image upload easy with Angular",
       "content": "This is the second part of the tutorial on how to upload an image to Amazon S3. You can find the first part here. In this article, we will take a look at the Angular Part.\n\nYou can also watch my step by step video tutorial of an image upload. The link is provided at the bottom of this article.",
       "username": "imelilabourne",
-      "date": 1601626375675,
-      "status": "forApproval",
-      "id": 5
-    },
-    {
-      "title": "Music Award 2020",
-      "content": "The awards, honoring the most-played artists",
-      "username": "johnmayer",
-      "imageUrl": "../../../assets/5.jpg",
-      "date": 1601529059661,
-      "status": "forApproval",
-      "id": 6
-    }, 
-
-    {
-      "title": "Here’s something cute",
-      "content": "When lockdown happened in the UK it happened very suddenly. At the law firm I work at, our office building emptied overnight when everyone was told to work from home. No time to clear our desks, no time to bring office plants home.\n\nFast forward three and a half months - everyone assumes that their plants are dead.",
-      "username": "imelilabourne",
-      "date": 1601626114792,
-      "id": 7
-    },
-    {
-      "title": "“Blackpink in your area?” “Blackpink in your style!”",
-      "content": "You all are aware that Blackpink is considered one of the most fashionable K-pop stars as each of the members has her unique style and all the members are official ambassadors of big luxury brands. \n\nBut hey, not everything they wear is super expensive and high end, and you can even buy it from Korea to mix and match Blackpink’s style with yours! Want to know more about which items you can actually get from Korea? Read on to get our secrets. ",
-      "username": "imelilabourne",
-      "date": 1601626300565,
-      "id": 8
-    },
-    {
-      "title": "try message",
-      "content": "hello, how are you",
-      "username": "imelilabourne",
-      "date": 1601627352601,
-      "id": 9
+      "status": "Approved",
+      "date": "2020-11-18T01:25:27.949Z",
+      "id": 4
     }
   ],
   "drafts": [
-    {
-      "title": "Why is this safe from CSRF?",
-      "content": "Although a form submit to /refresh_token will work and a new access token will be returned, the attacker can't read the response if they're using an HTML form.",
-      "username": "imelilabourne",
-      "date": 1601872852748,
-      "id": 1
-    },
     {
       "title": "New draft",
       "content": "Insert Content",
@@ -122,6 +79,49 @@
       "username": "johnmayer",
       "date": 1601873247777,
       "id": 3
+    }
+  ],
+  "pending": [
+    {
+      "title": "Music Award 2020",
+      "content": "The awards, honoring the most-played artists",
+      "username": "johnmayer",
+      "imageUrl": "../../../assets/5.jpg",
+      "date": 1601529059661,
+      "status": "forApproval",
+      "id": 3
+    },
+    {
+      "title": "Here’s something cute",
+      "content": "When lockdown happened in the UK it happened very suddenly. At the law firm I work at, our office building emptied overnight when everyone was told to work from home. No time to clear our desks, no time to bring office plants home.\n\nFast forward three and a half months - everyone assumes that their plants are dead.",
+      "username": "imelilabourne",
+      "date": 1601626114792,
+      "status": "forApproval",
+      "id": 4
+    },
+    {
+      "title": "“Blackpink in your area?” “Blackpink in your style!”",
+      "content": "You all are aware that Blackpink is considered one of the most fashionable K-pop stars as each of the members has her unique style and all the members are official ambassadors of big luxury brands. \n\nBut hey, not everything they wear is super expensive and high end, and you can even buy it from Korea to mix and match Blackpink’s style with yours! Want to know more about which items you can actually get from Korea? Read on to get our secrets. ",
+      "username": "imelilabourne",
+      "date": 1601626300565,
+      "status": "forApproval",
+      "id": 5
+    },
+    {
+      "title": "try message",
+      "content": "hello, how are you",
+      "username": "imelilabourne",
+      "date": 1601627352601,
+      "status": "forApproval",
+      "id": 6
+    },
+    {
+      "title": "Why is this safe from CSRF?",
+      "content": "Although a form submit to /refresh_token will work and a new access token will be returned, the attacker can't read the response if they're using an HTML form.",
+      "username": "imelilabourne",
+      "status": "forApproval",
+      "date": "2020-11-18T01:21:01.956Z",
+      "id": 7
     }
   ]
 }

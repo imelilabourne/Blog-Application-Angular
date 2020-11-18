@@ -5,16 +5,15 @@
     background-color: #c9dce7;
     padding: 20px 0;
     border-radius: 5px;
-    box-shadow: 4px 4px  #3481ad;
+    box-shadow: 4px 4px  #537a91;
     
 }
 
 *{
     font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
 }
 tbody > tr:nth-child(even){
-    background-color:#408EBA;
+    background-color:#3c4d57;
     color: white;
 }
 

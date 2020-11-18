@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'users-blog',
@@ -13,4 +14,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./users-blog.component.css']
 })
 export class UsersBlogComponent {
+  constructor(private userService: AuthService){}
+  user = localStorage.getItem('user');
+
+  ngOnInit(){
+    this.userService.getUserDetails().subscribe(user => {
+      
+    });
+  }
 }

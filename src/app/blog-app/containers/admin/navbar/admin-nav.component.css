@@ -4,18 +4,26 @@ nav{
     justify-content: space-between;
     height: 60px;
     line-height: 60px;
-    background: linear-gradient(90deg, #408EBA 50%, #102539 50%);
+  
     padding: 0 30px;
-    color: white;
+    color: black;
     align-items: center;
-    position: fixed;
+    /* position: fixed; */
     width: 100%;
     top: 0;
 }
 
+.sticky {
+    position: fixed;
+    width: 100%;
+    background: linear-gradient(90deg, #408EBA 50%, #102539 50%);
+    animation: ease-in-out 10s;
+    color: white;
+    z-index: 1;
+}
 
 .link > a{
-    color: ivory;
+    /* color: rgb(10, 10, 10); */
     margin-left: 30px;
     font-size: 16px;
     line-height: 70px;

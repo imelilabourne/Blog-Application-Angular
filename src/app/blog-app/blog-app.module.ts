@@ -15,6 +15,7 @@ import { RigthbarComponent } from './components/rigthbar/rigthbar.component';
 import { BlogsComponent } from './containers/users/blogs/blogs.component';
 import { ComposeBlogComponent } from './containers/users/compose-blog/compose-blog.component';
 import { BlogItemComponent } from './containers/users/blog-item/blog-item.component'
+import { DraftComponent } from './containers/users/draft/draft.component';
 @NgModule({
   declarations: [
     BaseComponent,
@@ -26,7 +27,8 @@ import { BlogItemComponent } from './containers/users/blog-item/blog-item.compon
     RigthbarComponent,
     BlogsComponent,
     ComposeBlogComponent,
-    BlogItemComponent
+    BlogItemComponent,  
+    DraftComponent
   ],
   imports: [
     BrowserModule,

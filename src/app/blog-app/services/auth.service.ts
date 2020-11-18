@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { User } from '../containers/interfaces/auth-form.interface';
+import { map } from 'rxjs/operators';
 
 interface myData {
     success: boolean, 
@@ -20,8 +21,18 @@ export class AuthService{
         return this.http.post<myData>('http://localhost:3000/admin', user)
     }
 
-    getUserDetails(user: User){
-        return this.http.post<myData>('http://localhost:3000/users', user)
+    getUserDetails(){
+        return this.http.get('http://localhost:3000/users').pipe(map(item => {
+            const temp = [];
+
+            temp.push(item);
+
+            return temp;
+        }))
+    }
+
+    getUsers(){
+        return this.http.get('http://localhost:3000/users');
     }
 
     get isLoggedIn(){

@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { BlogService } from 'src/app/blog-app/services/blog.service';
-import { LoginService } from 'src/app/blog-app/services/login.service';
 import { Blog } from '../../interfaces/composeBlog.interface';
 
 @Component({
@@ -95,12 +94,20 @@ export class ManagePostComponent{
   
   status: boolean = false;
   ngOnInit(){
+    this.blogService.getPendingPost().subscribe(data => this.blogs = data);
   }
 
   approvedPost(blog){
     this.blogs = this.blogs.filter(item => blog !== item)
 
-    this.blogService.addBlog(blog)
+    this.blogService.addBlog({
+      title: blog.title,
+      content: blog.content,
+      imageUrl: blog.imageUrl,
+      username: blog.username,
+      status: "Approved",
+      date: new Date(),
+    })
       .subscribe(data => {
         this.blogService.removePending(blog.id)
           .subscribe(data => console.log(data));
@@ -112,7 +119,4 @@ export class ManagePostComponent{
     alert("Post Request Deniied")
   }
 
-  deniedClasss(blog){
-    
-  }
 }
