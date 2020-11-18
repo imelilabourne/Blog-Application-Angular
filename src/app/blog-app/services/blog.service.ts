@@ -13,8 +13,16 @@ export class BlogService{
         return this.http.get<Blog[]>("http://localhost:3000/blogs")
     }
 
-    addBlog(blog): Observable<Blog>{
+    addBlog(blog: Blog): Observable<Blog>{
         return this.http.post<Blog>("http://localhost:3000/blogs", blog ,{
+            headers: new HttpHeaders({
+                'Content-Type': 'application/json'
+            })
+        })
+    }
+
+    addPending(blog: Blog): Observable<Blog>{
+        return this.http.post<Blog>("http://localhost:3000/pending", blog ,{
             headers: new HttpHeaders({
                 'Content-Type': 'application/json'
             })

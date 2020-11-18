@@ -11,34 +11,33 @@ import { User } from '../../interfaces/auth-form.interface';
         <div class="flex">
           <img *ngIf="imageUrl" [src]="imageUrl" class="userPic">
           <!--<textarea name="" id="" cols="70" rows="4" placeholder="What's Happenning?"></textarea>-->
-
+          <div>
+          <input placeholder="Title" class="form-control">
           <emoji-input
             [(model)]="bindedVariable"
             [textArea]="{cols: 70, rows: 5}"
             [onEnter]="onEnterFunction"
             [popupAnchor]="'top'"
             (setPopupAction)="setPopupAction($event)">
+
           </emoji-input>
+          </div>
         </div>
-  <!--
-        <button type="button" name="button"  style="display: inline-block;" (click)="openPopup()">
-        Insert Emoji
-        </button>
--->
+
         <div class="blog-post-wrapper">
             <img [src]="source" *ngIf="source" class="blogPic">
         </div>
         <div>
         <label class="label" for="input">Please upload a picture !</label>
 
-        <input type="file" id="input" accept="image/*" (change)="updateSource($event)">
+        <input  type="file" id="input" accept="image/*" (change)="updateSource($event)">
           <i class="far fa-images"></i>
           <i class="fa fa-camera"></i>
           
           <button type="button" name="button"  style="display: inline-block;" (click)="openPopup()">
           <i class="fa fa-smile"></i>
           </button>
-          <button class="compose-button">Compose</button>
+          <button (click)="composeBlog()" class="compose-button">Compose</button>
         </div>
       </div>
   `,
@@ -46,21 +45,37 @@ import { User } from '../../interfaces/auth-form.interface';
 })
 export class ComposeBlogComponent implements OnInit {
 
-  constructor(private loginService: LoginService){}
+  constructor(private loginService: LoginService, private blogService: BlogService){}
 
   user: User;
   selectedFile: File = null;
   username: string;
   imageUrl: string;
   source:string = '';
-  
+  bindedVariable;
+  input: string;
+  title: string;
 
   public openPopup: Function;
 
-    setPopupAction(fn: any) {
-        this.openPopup = fn;
-    } 
-  
+  setPopupAction(fn: any) {
+      this.openPopup = fn;
+  } 
+
+  composeBlog(){
+    this.blogService.addPending({
+      title: this.title,
+      content: this.bindedVariable,
+      imageUrl: "../../../assets/1.jpg",
+      username: localStorage.getItem('user'),
+      status: "forApproval",
+      date: new Date(),
+    }).subscribe(
+      data => console.log(data)
+    )
+
+  }
+
   updateSource(event) {
 
     this.projectImage(event.target['files'][0]);
@@ -73,7 +88,7 @@ export class ComposeBlogComponent implements OnInit {
         reader.onload = (e: any) => {
 
         this.source = e.target.result;
-        this.selectedFile = <File>event;
+        this.selectedFile = <File>file;
       };
 
       reader.readAsDataURL(file);

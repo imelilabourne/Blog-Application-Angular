@@ -12,10 +12,8 @@ import { Blog } from '../../interfaces/composeBlog.interface';
       <div class="interaction">
       <p>{{ blog.content }}</p> 
         <div class="blog-img-wrapper">
-        <img *ngIf="blog.imageUrl" src="{{ blog.imageUrl }}">
+        <img *ngIf="blog.imageUrl" src="{{ blog?.imageUrl }}" alt="{{blog.title}}.jpg">
         </div>
-
-
         <div class="interactions-div">
           <a><i class="far fa-heart"></i></a>
           <span>10,378 likes</span>
