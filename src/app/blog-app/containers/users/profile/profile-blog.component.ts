@@ -105,13 +105,8 @@ export class ProfileBlogComponent{
                   })
               })
             }
-
-            
           });
       });
-
-
-
   }
 
 
