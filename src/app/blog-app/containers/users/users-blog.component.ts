@@ -4,7 +4,7 @@ import { AuthService } from '../../services/auth.service';
 @Component({
   selector: 'users-blog',
   template:`
-  <div class="flex evenly-flex">
+  <div class="flex container">
         <navbar-blog></navbar-blog>
         <app-blogs></app-blogs>
         <app-rigthbar></app-rigthbar>

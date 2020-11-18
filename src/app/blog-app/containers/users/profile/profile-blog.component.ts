@@ -10,8 +10,9 @@ import { Blog } from "../../interfaces/composeBlog.interface";
     template: `
 
     <div class="flex">
+    <navbar-blog></navbar-blog>
 
-      <navbar-blog></navbar-blog>
+
       <div class="container">
         <div *ngIf="modal" class="modals ">
             <blog-draft ></blog-draft>

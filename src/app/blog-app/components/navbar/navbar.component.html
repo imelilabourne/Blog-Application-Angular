@@ -1,0 +1,12 @@
+<button *ngIf="!bool" (click)="menubar()">
+    <div class="burger"></div>
+    <div class="burger"></div>
+    <div class="burger"></div>
+</button>
+
+<div class="container" *ngIf="bool" [class.extend]="bool" >
+    <div><a routerLink="/users"><i class="fa fa-home"> HOME</i></a></div>
+    <div><a *ngIf="user !=='admin' " routerLink="/profile"><i class="fa fa-user-circle"> PROFILE</i></a></div>
+    <div><a routerLink="/login" (click)="removeUser()" class="logout"><i>LOGOUT</i></a></div>
+
+</div>

@@ -3,19 +3,19 @@ import { Component} from '@angular/core';
 @Component({
   selector: 'navbar-blog',
   styleUrls: ['navbar.component.css'],
-  template:`
-        <div  class="sidebar">
-            <!--<div class="logo">Blg</div>-->
-            <div><a routerLink="/users"><i class="fa fa-home"> Home</i></a></div>
-            <div><a *ngIf="user !=='admin' " routerLink="/profile"><i class="fa fa-user-circle"> Profile</i></a></div>
-            <a routerLink="/login" (click)="removeUser()" class="logout">Logout</a>
-        </div>`,
+  templateUrl: 'navbar.component.html'
 })
 export class NavbarComponent {
     user = localStorage.getItem('user');
+    bool: boolean = false;
+
     removeUser(){
         localStorage.clear()
     }
 
+
+    menubar(){
+        this.bool = !this.bool;
+    }
  
 }

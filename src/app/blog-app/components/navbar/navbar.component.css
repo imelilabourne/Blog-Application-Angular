@@ -1,29 +1,39 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&family=Rochester&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Courgette&family=Sansita+Swashed:wght@300&display=swap');
-.sidebar{
-    /* width: 140px; */
-    display: grid;
-    align-self: center;
-    margin-top: 40px;
-    padding-left: 20px;
-    padding: 20px 30px 0 30px;
+button{
+    border: none;
+    background-color: inherit;
+    padding: 20px 10px;
+}
+.extend{
+    position: absolute;
+    width: 100%;
+    background-color: white;
+    text-align: center;
+    z-index: 1;
 }
 
-.sidebar > div{
-    width: 120px;
+
+.extend > div:hover{
+    background-color: rgb(237, 241, 241);
 }
 
-
-
-
-.logo{
-    margin: 0 20px;
-    font-family: 'Rochester', cursive;
-    font-size: 30px;
+.extend > div{
+    min-height: 170px;
+    line-height: 170px;
 }
 
-a > i, .logout{
+div.burger {
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 12px;
+  }
+  
+
+a > i{
     font-size: 20px;
     line-height: 40px;
     padding-left: 10px;
+    height: 30%;
 }

@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { BlogAppModule } from './blog-app/blog-app.module'
 import { LoginService } from './blog-app/services/login.service';
 import { HttpClientModule } from '@angular/common/http';
+import { EmojiPickerModule } from 'ng-emoji-picker';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     BlogAppModule,
-    HttpClientModule
+    HttpClientModule,
+    EmojiPickerModule
   ],
   providers: [
     LoginService

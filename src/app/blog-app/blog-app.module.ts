@@ -16,6 +16,7 @@ import { BlogsComponent } from './containers/users/blogs/blogs.component';
 import { ComposeBlogComponent } from './containers/users/compose-blog/compose-blog.component';
 import { BlogItemComponent } from './containers/users/blog-item/blog-item.component'
 import { DraftComponent } from './containers/users/draft/draft.component';
+import { EmojiPickerModule } from 'ng-emoji-picker';
 @NgModule({
   declarations: [
     BaseComponent,
@@ -35,7 +36,8 @@ import { DraftComponent } from './containers/users/draft/draft.component';
     CommonModule,
     BlogRoutingModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    EmojiPickerModule
   ],
   providers: [AuthGuard, AuthService, DraftService],
   exports:[
