@@ -12,8 +12,6 @@ import { Blog } from "../../interfaces/composeBlog.interface";
     <div class="flex">
 
       <navbar-blog></navbar-blog>
-
- 
       <div class="container">
         <div *ngIf="modal" class="modals ">
             <blog-draft ></blog-draft>
@@ -21,7 +19,6 @@ import { Blog } from "../../interfaces/composeBlog.interface";
           <div class="top row bg">
               <div class="col">
                   <img alt="display-photo"  *ngIf="imageUrl" [src]="imageUrl">
-                  <!-- <h2>elilypad</h2> -->
               </div>
               <div class="col">
                   <h3>{{ user?.firstname }} {{ user?.lastname }}</h3>
@@ -36,29 +33,29 @@ import { Blog } from "../../interfaces/composeBlog.interface";
           </div>
           <div class="row bottom">
   
-  <div class="status">
-    <table class="table table-striped">
-      <thead>
-        <tr>
-          <th scope="col">#</th>
-          <th scope="col">Title</th>
-          <th scope="col">Status</th>
-        </tr>
-      </thead>
+        <div class="status">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Title</th>
+                <th scope="col">Status</th>
+              </tr>
+            </thead>
 
-      <tbody>
-        <tr *ngFor="let blog of blogs ; let i=index">
-          <th scope="row">{{i + 1}}</th>
-          <td>{{ blog.title }}</td>
-          <td>{{ blog.status }}</td>
-        </tr>
-        
-      </tbody>
-    </table>
-  </div>
-  </div>
+            <tbody>
+              <tr *ngFor="let blog of blogs ; let i=index">
+                <th scope="row">{{i + 1}}</th>
+                <td>{{ blog.title }}</td>
+                <td>{{ blog.status }}</td>
+              </tr>
+              
+            </tbody>
+          </table>
+        </div>
+        </div>
 
-    </div>
+      </div>
     </div>
     
     `

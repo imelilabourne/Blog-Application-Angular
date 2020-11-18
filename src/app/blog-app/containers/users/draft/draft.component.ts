@@ -25,13 +25,19 @@ import { Blog } from '../../interfaces/composeBlog.interface';
 
 export class DraftComponent{
 
-    drafts: Blog[];
+    drafts: Blog[] = [];
     constructor(private draftService: DraftService
         , private blogService:BlogService){}
 
     ngOnInit(){
         this.draftService.getDrafts().subscribe(data => {
-            this.drafts = data;
+            data.map(user => {
+                if(user.username === "johnmayer"){
+                    this.drafts.push(user);
+                }
+
+            })
+            
         })
     }
 
