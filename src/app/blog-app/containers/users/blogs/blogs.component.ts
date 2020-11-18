@@ -7,6 +7,7 @@ import { Blog } from '../../interfaces/composeBlog.interface';
   template: `
     <div class="containera">
       <app-compose-blog></app-compose-blog>
+      <hr>
       <app-blog-item [blogs]="data"></app-blog-item>
     </div>
   `,

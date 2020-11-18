@@ -11,23 +11,23 @@ import { Blog } from "../../interfaces/composeBlog.interface";
 
     <div class="flex">
     <navbar-blog></navbar-blog>
-
-
+    
+    <div *ngIf="modal" class="modals ">
+      <blog-draft ></blog-draft>
+    </div>
       <div class="container">
-        <div *ngIf="modal" class="modals ">
-            <blog-draft ></blog-draft>
-        </div>
+    
           <div class="top row bg">
-              <div class="col">
+              <div class="col-md-3">
                   <img alt="display-photo"  *ngIf="imageUrl" [src]="imageUrl">
               </div>
-              <div class="col">
+              <div class="col-md-6">
                   <h3>{{ user?.firstname }} {{ user?.lastname }}</h3>
                   <p> @{{user?.username }}</p>
                   <p>{{ user?.email }}</p>
               </div>
 
-              <div class="col">
+              <div class="col button-col">
                 <button (click)="toggle()" class="btn btn-secondary">Drafts</button>
               </div>
 

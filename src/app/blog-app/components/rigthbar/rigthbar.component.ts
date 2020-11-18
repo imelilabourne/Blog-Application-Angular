@@ -4,6 +4,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-rigthbar',
   styleUrls: ['rigthbar.component.css'],
   template: `
+  <div class="">
     <div class="sidebar">
       <div class="flex search-div">
         <input class="search" placeholder="Search"/><i class="fa fa-search"></i>
@@ -14,15 +15,29 @@ import { Component, OnInit } from '@angular/core';
           </h4>
           <p>Zoro</p>
           <p>#Lazada1111</p>
+          <p>shawn mendes</p>
+          <p>PS5</p>
+          <p>The Juans</p>
         </div>
         <hr>
         <div class="wrapper">
           <h4>Who to Follow</h4>
-          <div class="container-fluid flex evenly-flex">
-            <p>Huawei</p>
-            <button class="btn-primary">Follow</button>
+          <div class="flex">
+            <div><p>Huawei</p></div>
+            <div><button class="btn-primary">Follow</button></div>
+          </div>
+
+          <div class="flex">
+            <div><p>CDO</p></div>
+            <div><button class="btn-primary">Follow</button></div>
+          </div>
+
+          <div class="flex">
+            <div><p>Samsung</p></div>
+            <div><button class="btn-primary">Follow</button></div>
           </div>
         </div>
+    </div>
     </div>
   `,
 })

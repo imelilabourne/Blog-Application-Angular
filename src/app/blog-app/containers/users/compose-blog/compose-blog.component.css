@@ -3,7 +3,7 @@
     float: right;
     height: 30px;
     border: none;
-    background-color: rgb(224, 221, 221);
+    background-color: rgb(206, 235, 247);
 }
 
 .compose-button:hover{
@@ -18,17 +18,31 @@
     max-height: 60px;
 }
 
+
+button{
+    border-radius: 4px;
+    padding: 0 14px;
+}
+
+.smile-btn{
+    border: none;
+    background-color: inherit;
+    padding: 0;
+}
+
+.flex{
+    padding: 10px 2em;
+}
+
+.interactions{
+    padding: 10px 2em;
+    margin-left: 4.5em;
+}
+
 .blogPic{
     max-width: 300px;
 }
 
-textarea{
-    border: none;
-}
-
-textarea::placeholder{
-    line-height: 40px;
-}
 
 i{
     font-size: 20px;

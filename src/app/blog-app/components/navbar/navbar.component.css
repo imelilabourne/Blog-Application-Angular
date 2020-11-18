@@ -7,12 +7,18 @@ button{
 }
 .extend{
     position: absolute;
-    width: 100%;
+    width: 250px;
     background-color: white;
     text-align: center;
     z-index: 1;
 }
 
+.nav{
+    position: fixed;
+    left: 0%;
+    top: 0%;
+    width: 200px;
+}
 
 .extend > div:hover{
     background-color: rgb(237, 241, 241);
@@ -26,7 +32,7 @@ button{
 div.burger {
     width: 35px;
     height: 5px;
-    background-color: black;
+    background-color: rgb(80, 77, 77);
     margin: 6px 12px;
   }
   
